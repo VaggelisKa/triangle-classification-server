@@ -13,7 +13,8 @@ const triangleSchema = new Schema({
     xAxis: { type: Number, required: true},
     yAxis: { type: Number, required: true}
   },
-  triangleClass: String
+  triangleClass: String,
+  date: Number
 })
 
 module.exports = model('Triangle', triangleSchema);
