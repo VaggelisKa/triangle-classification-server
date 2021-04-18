@@ -1,6 +1,6 @@
 const getDistanceBetweenPoints = require('../helpers/getDistance');
 const getTriangleClass = require('../helpers/getTriangleClass');
-const areColinear = require('../helpers/areColinear');
+const isAreaFormed = require('../helpers/isAreaFormed');
 
 const Triangle = require('../models/Triangle');
 
@@ -12,8 +12,8 @@ const classifyController = async (req, res) => {
       throw new Error('No points found');
     }
 
-    if (areColinear(p1, p2, p3)) {
-      throw new Error('Triangle could not be formed, points are colinear!');
+    if (!isAreaFormed(p1, p2, p3)) {
+      throw new Error('The points you provided do NOT form a triangle');
     }
 
     const distanceBetweenP1AndP2 = getDistanceBetweenPoints(p1, p2);
