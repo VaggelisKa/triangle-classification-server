@@ -14,19 +14,19 @@ app.use(express.urlencoded({ extended: false }));
 
 mongoose.connect(
   'mongodb://mongo:27017/app-server',
-  { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true, 
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
     useFindAndModify: true,
     useCreateIndex: true
   }
 )
-.then(() => console.log('MongoDB is connected!'))
-.catch(err => console.log(err));
+  .then(() => console.log('MongoDB is connected!'))
+  .catch(err => console.log(err));
 
 app.use(classifyRouter);
 app.use(pastSearchesRouter);
 
 app.listen(4000, () => {
-  console.log('Listening on 4000!!')
+  console.log('Listening on 4000!!');
 });

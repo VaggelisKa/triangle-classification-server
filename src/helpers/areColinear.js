@@ -4,6 +4,6 @@ const areColinear = (p1, p2, p3) => {
                      p3.xAxis * (p1.yAxis - p2.yAxis);
 
   return areaFormed === 0;
-}
+};
 
 module.exports = areColinear;

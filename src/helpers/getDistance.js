@@ -4,6 +4,6 @@ const getDistanceBetweenPoints = (p1, p2) => {
   );
 
   return distance;
-}
+};
 
 module.exports = getDistanceBetweenPoints;

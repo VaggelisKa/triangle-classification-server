@@ -6,6 +6,6 @@ const getTriangleClass = (edge1, edge2, edge3) => {
   } else {
     return 'Scalene';
   }
-}
+};
 
 module.exports = getTriangleClass;
